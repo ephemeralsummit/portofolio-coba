@@ -46,6 +46,46 @@
 
 
 
+/* Jumbotron Harga
+.jumbotron-harga {
+    background: url(../img/jumbotron-harga.jpg);
+    background-size: cover;
+    height: 540px;
+    position: relative;
+    z-index: -1;
+}
+
+.jumbotron-harga::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    bottom: 0;
+}
+
+.jumbotron-harga .container {
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.jumbotron-harga .display-4 {
+    font-weight: 200;
+    font-size: 2.6em;
+    margin-top: 100px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+}
+
+.jumbotron-harga .display-4 span {
+    font-weight: 500;
+} */
+
+
+
 /* Info Panel */
 .info-panel {
     background-color: white;
@@ -193,4 +233,50 @@
         font-size: 2em;
     }
 
+}
+
+
+.pricing-card {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+}
+
+.pricing-card.featured {
+  background: #e8f7ff;
+  border-top: 4px solid #17a2b8;
+}
+
+.harga {
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.jumbotron-harga {
+  background: url(../img/jumbotron-harga.jpg) no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+
+.jumbotron-harga::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%; /* adjust strength */
+  background: linear-gradient(
+    rgba(0,0,0,0.65), 
+    rgba(0,0,0,0)
+  );
+  pointer-events: none;
 }
